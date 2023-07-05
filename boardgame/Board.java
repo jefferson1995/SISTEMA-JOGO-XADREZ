@@ -29,7 +29,7 @@ public class Board {
 
     //Retorna uma peça ao ser passado uma linha e uma coluna.
     public Piece piece(int row, int column) {
-        if(!positionExists(row, column)){
+        if (!positionExists(row, column)) {
             throw new BoardException("Peça não encontrada no tabuleiro");
         }
         return pieces[row][column];
@@ -37,7 +37,7 @@ public class Board {
 
     //Sobrecarga do método acima
     public Piece piece(Position position) {
-        if(!positionExists(position)){
+        if (!positionExists(position)) {
             throw new BoardException("Posição não encontrada no tabuleiro");
         }
         return pieces[position.getRow()][position.getColumn()];
@@ -47,11 +47,27 @@ public class Board {
        Método para receber uma peça e adicionar na posição
      */
     public void placePiece(Piece piece, Position position) {
-        if(thereIsPiece(position)){
+        if (thereIsPiece(position)) {
             throw new BoardException("Já existe uma peça na posição: " + position);
         }
         pieces[position.getRow()][position.getColumn()] = piece;
         piece.position = position;
+    }
+
+    /*
+        Método para remover a peça do tabuleiro
+     */
+    public Piece removePiece(Position position) {
+        if (!positionExists(position)) {
+            throw new BoardException("Posição não existe no tabuleiro");
+        }
+        if (piece(position) == null) {
+            return null;
+        }
+        Piece aux = piece(position);
+        aux.position = null;
+        pieces[position.getRow()][position.getColumn()] = null;
+        return aux;
     }
 
     //Método auxiliar para verificar linha e coluna.
@@ -70,7 +86,7 @@ public class Board {
         Método para verificar se existe uma peça na posição
      */
     public boolean thereIsPiece(Position position) {
-        if(!positionExists(position)){
+        if (!positionExists(position)) {
             throw new BoardException("Posição não encontrada no tabuleiro");
         }
         return piece(position) != null;
