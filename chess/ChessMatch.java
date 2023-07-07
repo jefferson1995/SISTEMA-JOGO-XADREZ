@@ -34,6 +34,15 @@ public class ChessMatch {
     }
 
     /*
+        Método para adicionar a cor azul nos movimentos possiveis
+     */
+    public boolean[][] possibleMove(ChessPosition sourcePosition){
+        Position position = sourcePosition.toPosition();
+        validateSourcePosition(position);
+        return board.piece(position).possibleMoves();
+    }
+
+    /*
         Método para capturar a peça de origem e mover para outra posição
      */
     public ChessPiece performChessMove(ChessPosition sourcePosition, ChessPosition targetPosition){
