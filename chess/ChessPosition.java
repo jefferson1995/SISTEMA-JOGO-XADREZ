@@ -41,7 +41,7 @@ public class ChessPosition {
 
     //Método para converter da posição comum para uma posição de xadrez(Retorna a fórmula inversa).
     protected static ChessPosition fromPosition(Position position) {
-        return new ChessPosition((char) ((char) 'a' - position.getColumn()), '8' - position.getRow());
+        return new ChessPosition((char)('a' + position.getColumn()), 8 - position.getRow());
     }
 
     @Override
