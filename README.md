@@ -1,6 +1,6 @@
 # SISTEMA-JOGO-XADREZ
 
-[![NPM](https://img.shields.io/npm/l/react)(https://github.com/jefferson1995/SISTEMA-JOGO-XADREZ/blob/main/LICENSE.txt) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/jefferson1995/SISTEMA-JOGO-XADREZ/blob/main/LICENSE.txt)
 
 # Sobre o projeto
 
