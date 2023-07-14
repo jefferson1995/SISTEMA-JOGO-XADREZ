@@ -1,6 +1,6 @@
 # SISTEMA-JOGO-XADREZ
 
-[![NPM](https://img.shields.io/npm/l/react)(adicionar link licenca) 
+[![NPM](https://img.shields.io/npm/l/react)(https://github.com/jefferson1995/SISTEMA-JOGO-XADREZ/blob/main/LICENSE.txt) 
 
 # Sobre o projeto
 
@@ -25,10 +25,10 @@
 ## Layout
 
 
-![tela](adicionar link)
+![tela](https://github.com/jefferson1995/SISTEMA-JOGO-XADREZ/blob/main/assets/telaSistema.png)
 
 ## Modelo conceitual
-![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
+![Modelo Conceitual](https://github.com/jefferson1995/SISTEMA-JOGO-XADREZ/blob/main/assets/chess-system-design.png)
 
 # Tecnologias utilizadas
 
